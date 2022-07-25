@@ -1,7 +1,13 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import { ToDoAddForm } from './components/toDoAddForm'
+import { ToDoList } from './components/ToDoList'
 export const App = () => {
+  let [todoList, setTodoList] = useState('');
+
   return (
-    <div>App_test</div>
+    <>
+      <ToDoAddForm todoList={todoList} setTodoList={setTodoList}/>
+      <ToDoList todoList={todoList} setTodoList={setTodoList}/>
+    </>
   )
 }
