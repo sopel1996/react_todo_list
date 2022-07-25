@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ToDoAddForm } from './components/toDoAddForm'
 import { ToDoList } from './components/ToDoList'
 export const App = () => {
-  let [todoList, setTodoList] = useState('');
+  let [todoList, setTodoList] = useState(JSON.parse(localStorage.getItem("todoList")) || []);
+
+  useEffect(()=>{
+    
+  },[])
 
   return (
     <>
