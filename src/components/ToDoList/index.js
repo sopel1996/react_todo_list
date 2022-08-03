@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react'
+import React, {useContext } from 'react'
 import { v4 as uuidv4 } from "uuid";
 import { ListItem } from '../listItem'
+import ListContext from "../../contexts/ListContext";
 
-export const ToDoList = ({todoList,setTodoList}) => {
+export const ToDoList = () => {
+  const { todoList } = useContext(ListContext);
 
   return (
     <>
       {
-        todoList.map(el=>{
-          return <ListItem el={el} key={uuidv4()} todoList={todoList} setTodoList={setTodoList}/>
+        todoList.map((el, index)=>{
+          return <ListItem key={uuidv4()} el={el} id={index+1}/>
         })
       }
     </>
