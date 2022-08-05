@@ -7,12 +7,12 @@ export const ToDoList = () => {
   const { todoList } = useContext(ListContext);
 
   return (
-    <>
+    <div className='todoList_list'>
       {
         todoList.map((el, index)=>{
           return <ListItem key={uuidv4()} el={el} id={index+1}/>
         })
       }
-    </>
+    </div>
   )
 }

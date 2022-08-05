@@ -1,0 +1,19 @@
+.stickyForm{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.stickyForm_taskInput{
+    flex-grow: 1;
+    height: 100%;
+    padding: 15px 5px;
+}
+.stickyForm_submitBtn{
+    height: 100%;
+}

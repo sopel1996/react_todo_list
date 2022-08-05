@@ -18,8 +18,7 @@ export const ListItem = ({el, id}) => {
   return (
     <div className={cn('ListItem', {'done': checkbox})} onClick={changeCheckbox}>
         <div className='ListItem_id'>{id}</div>
-        <input type="checkbox" checked={checkbox} ></input>
-        <div className='ListItem_done'>{el.done}</div>
+        <input type="checkbox" checked={checkbox} className="listItem_checkbox"></input>
         <div className='ListItem_name'>{el.name}</div>
     </div>
   )
